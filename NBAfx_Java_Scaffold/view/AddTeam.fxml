@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>	
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.*?> 
+<?import javafx.geometry.*?>
+
+<VBox  styleClass="background" prefHeight="350.0" prefWidth="600.0" spacing="20" 
+       xmlns:fx="http://javafx.com/fxml/1" 
+       fx:controller="controller.AddTeamController" 
+       alignment="CENTER">
+    <padding>
+        <Insets top="10" bottom="10" left="5" right="5" />
+    </padding>
+   
+   <GridPane alignment="CENTER">
+        <Label text="Team Details" styleClass="label-h2" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2"/>
+
+        <Label text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <TextField fx:id="inputTF" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        <columnConstraints>
+            <ColumnConstraints prefWidth="120"/>
+        </columnConstraints>
+   </GridPane>
+   
+   <Button text="Add" fx:id="addButton" onAction="#handleAdd"/>
+   
+    <stylesheets>
+        <URL value="@style.css"/>
+    </stylesheets>
+</VBox>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>  
+
+<VBox alignment="CENTER" xmlns:fx="http://javafx.com/fxml/1"  styleClass="background"
+    fx:controller="controller.ManageTeamController"
+    prefHeight="540.0" prefWidth="780.0" spacing="10">
+        <HBox alignment="CENTER">
+            <Label text="Team Name:"/>
+            <TextField fx:id="teamNameTF"/>
+        </HBox>
+        
+        <TableView fx:id="playersTable" >
+            <columns>
+                <TableColumn text="Player Name" fx:id="playerNamesCol"/>
+
+                <TableColumn text="Player Credit" fx:id="playerCreCol"/>
+
+                <TableColumn text="Player Age" fx:id="playerAgeCol"/>
+
+                <TableColumn text="Player No" fx:id="playerNoCol"/>
+            </columns>
+        </TableView>
+
+        <HBox alignment="CENTER" spacing="10">
+            <Button text="Add" disable="false" fx:id="addButton" onAction="#handleAdd"/>
+            <Button text="Update" disable="true" fx:id="updateButton" onAction="#handleUpdate"/>
+            <Button text="Delete" disable="true" fx:id="deleteButton" onAction="#handleDelete"/>
+            <Button text="Save and Close" fx:id="closeButton" onAction="#handleClose"/>
+        </HBox>
+    <stylesheets>
+        <URL value="@style.css"/>
+    </stylesheets>
+    
+</VBox>
+
